@@ -27,7 +27,8 @@ $(document).ready(function(){
 			dataType: "json",
 			cache: false,
 			beforeSend: function (xhr, settings) {
-				console.log(data);
+				$("#treatment_info_form").hide();
+				$('.custom-loader').show();
 			},
 			success: function(data, statusText) {
 				// if(dataStoreUrl.indexOf('db_sinks') > -1){
