@@ -2,14 +2,26 @@ $background: #111E25;
 $dark: #111;
 $primary: #bb1515;
 
-input,
-button {
+input{
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -300%);
   display: block;
   width: 70vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s cubic-bezier(.4, .25, .8, .3);
+  border-radius: 20px;
+}
+
+button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  display: block;
+  width: 40vw;
   opacity: 0;
   pointer-events: none;
   transition: all .5s cubic-bezier(.4, .25, .8, .3);
@@ -116,7 +128,7 @@ input:focus + label .nav-dot:before {
   top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 30%;
   opacity: 0;
   color: #fff;
   font-size: .875rem;
@@ -125,6 +137,7 @@ input:focus + label .nav-dot:before {
   text-transform: uppercase;
   text-align: right;
   transition: opacity .25s .5s;
+  border-radius: 20px;
 }
 
 .signup-button,
@@ -133,13 +146,15 @@ input:focus + label .nav-dot:before {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -100%);
-  width: 70vw;
+  width: 30vw;
   padding: .25rem 0;
   line-height: 3.6rem;
   text-align: center;
   pointer-events: none;
   cursor: pointer;
   transition: opacity .4s .3s;
+  border-radius: 20px;
+  margin-top: -100px;
 }
 
 .signin-button,
@@ -148,7 +163,7 @@ input:focus + label .nav-dot:before {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -100%);
-  width: 70vw;
+  width: 40vw;
   padding: .25rem 0;
   line-height: 3.6rem;
   text-align: center;
