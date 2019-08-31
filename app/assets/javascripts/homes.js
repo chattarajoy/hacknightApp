@@ -22,7 +22,7 @@ $(document).ready(function(){
 		var request = $.ajax({
 			async: true,
 			type: 'POST',
-			url: 'hacknight.com:3000/get_treatment_status',
+			url: '/get_treatment_status',
 			data: data,
 			dataType: "json",
 			cache: false,
