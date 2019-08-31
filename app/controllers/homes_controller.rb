@@ -26,7 +26,7 @@ class HomesController < ApplicationController
   # POST /homes.json
   def create
     params.transform_values(&:downcase)
-    return_val = YAML.load(`python /home/joyc/HackNight/app/public/test.py '#{params.to_json}'`)
+    return_val = YAML.load(`python #{Rails.root.to_s}/public/test.py '#{params.to_json}'`)
     render json: { data: return_val}
   end
 

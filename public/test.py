@@ -1,0 +1,1 @@
+print({"result": "No", "probability": "70%"})
