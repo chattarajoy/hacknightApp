@@ -25,7 +25,7 @@ class HomesController < ApplicationController
   # POST /homes
   # POST /homes.json
   def create
-    byebug
+    params.transform_values(&:downcase)
   end
 
   # PATCH/PUT /homes/1
