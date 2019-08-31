@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
   # GET /homes
   # GET /homes.json
   def index
@@ -25,7 +25,8 @@ class HomesController < ApplicationController
   # POST /homes
   # POST /homes.json
   def create
-    byebug
+    return_val = YAML.load(`python /home/joyc/HackNight/app/public/test.py`)
+    render json: { data: return_val}
   end
 
   # PATCH/PUT /homes/1
@@ -52,4 +53,4 @@ class HomesController < ApplicationController
     end
   end
 
-end
+end 

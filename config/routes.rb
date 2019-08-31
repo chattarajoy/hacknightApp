@@ -3,4 +3,4 @@ Rails.application.routes.draw do
   root 'homes#index'
   get '/home' => 'homes#index'
   post '/get_treatment_status' => 'homes#create'
-end
+end 
