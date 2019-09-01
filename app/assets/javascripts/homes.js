@@ -31,18 +31,13 @@ $(document).ready(function(){
 				$('.custom-loader').show();
 			},
 			success: function(data, statusText) {
-				// if(dataStoreUrl.indexOf('db_sinks') > -1){
-				// 	showDataConnectionMenuList(false);
-				// 	saveOrUpdateConnectionCallBack(data, 'connection');
-				// }
-				// else{
-				// 	if(dataStoreRequestType == "PUT"){
-				// 		saveOrUpdateCallBackForConnectionTemplates(data, 'access', statusText);
-				// 	}
-				// 	else{
-				// 		saveOrUpdateCallBackForConnectionTemplates(data, 'connection', statusText);
-				// 	}
-				// }
+				$('.custom-loader').hide();
+				if(data.result === "Yes"){
+					$('.requires-treatment').show();
+				}
+				else{
+					$('.not-requires-treatment').show();
+				}
 			},
 			error:function(xhr_obj, text_status){
 				// var statusText = xhr_obj.statusText;
