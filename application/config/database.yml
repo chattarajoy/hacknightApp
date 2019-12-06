@@ -32,3 +32,4 @@ test:
   host: localhost
   reconnect: true
   wait_timeout: 30
+  port: 3800

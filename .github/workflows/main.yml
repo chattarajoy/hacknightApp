@@ -9,6 +9,8 @@ jobs:
       - name: MySQL Setup
         uses: mirromutth/mysql-action@v1.1
         with:
+          host port: 3800
+          container port: 3800
           character set server: 'utf8'
           mysql database: 'hacknight'
           mysql user: 'ruser'
@@ -32,3 +34,4 @@ jobs:
           bundle install --jobs 4 --retry 3
           bundle exec rails db:prepare
           bundle exec rails test
+
